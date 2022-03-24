@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import loop from './img/loop.png'
 import { sneakers } from './State';
 import Card from './Card';
+
+
 const Search = () => {
+
   const [value, setValue] = useState('')
+
   const filteredItems = sneakers.filter(item => {
     return item.name.toLowerCase().includes(value.toLowerCase())
   })
+
   return (
     <div>
       <header>
